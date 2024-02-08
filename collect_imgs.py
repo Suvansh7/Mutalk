@@ -5,11 +5,11 @@ DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-number_of_classes = 3
+number_of_classes = 36
 dataset_size = 100
 
 cap = cv2.VideoCapture(0)  # Change the index to 0 if you have only one webcam
-for j in range(number_of_classes):
+for j in range(29,number_of_classes):
     class_dir = os.path.join(DATA_DIR, str(j))
     if not os.path.exists(class_dir):
         os.makedirs(class_dir)
